@@ -1,4 +1,5 @@
 <html>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -7,8 +8,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <meta name="title" content="raylib - cheatsheet">
-        <meta name="description" content="raylib is a simple and easy-to-use library to enjoy videogames programming. Don't miss latest functions added to raylib... check raylib cheatsheet">
-        <meta name="keywords" content="raylib, videogames, programming, C, C++, library, learn, study, simple, easy, free, open source, raysan">
+        <meta name="description"
+            content="raylib is a simple and easy-to-use library to enjoy videogames programming. Don't miss latest functions added to raylib... check raylib cheatsheet">
+        <meta name="keywords"
+            content="raylib, videogames, programming, C, C++, library, learn, study, simple, easy, free, open source, raysan">
         <meta name="viewport" content="width=device-width">
 
         <!-- Open Graph metatags for sharing -->
@@ -19,121 +22,301 @@
         <meta property="og:description" content="Don't miss latest functions added to raylib... check raylib cheatsheet">
 
         <!-- Add jQuery library -->
-        <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script>
+        <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 
         <!-- hightlight.js - Syntax highlighting for the Web -->
         <link rel="stylesheet" href="style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
 
         <style type="text/css">
-        @font-face {
-            font-family: 'grixel_acme_7_wide_xtnd';
-            src: url('https://www.raylib.com/common/font/acme_7_wide_xtnd.eot');
-            src: url('https://www.raylib.com/common/font/acme_7_wide_xtnd.eot?#iefix') format('embedded-opentype'),
-            url('https://www.raylib.com/common/font/acme_7_wide_xtnd.woff') format('woff'),
-            url('https://www.raylib.com/common/font/acme_7_wide_xtnd.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            font-size-adjust:0.49;
-        }
-        body{background-color:#f5f5f5;}
-        #fulldata{width: 1315px!important;}
-        .eximage img{margin: 0 auto; border: 1px solid; border-color: black; width:770px; height:auto;}
-        p{font-family: grixel_acme_7_wide_xtnd, Courier New, Verdana, Arial; font-size:13px; line-height:24px;}
-        pre code{font-family: Courier New; font-size:12px; width: auto!important; border: 1px solid; border-color:#b0b0b0; width:758px; height:auto; }
-        .exdownbtn{
-            width:250px; height:30px; float:left; position: relative; cursor:pointer; font-weight:bold; font-size:10px;
-            line-height:30px; text-align: center; border-width:5px; background-color:#e1e1e1; color:#5c5a5a;
-            border:4px solid #898888; font-family: grixel_acme_7_wide_xtnd, Courier New, Verdana, Arial;
-        }
-        .exdownbtn:hover{background-color:#f0d6d6; color:#c55757; border:4px solid #e66666;}
-        #core pre code{border:10px solid; border-color:#888888; background-color:#dbdbe1; }
-        #shapes pre code{border:10px solid; border-color:#e66666; background-color:#e9d0d6; }
-        #textures pre code{border:10px solid; border-color:#75a06d; background-color:#c3e4bf; }
-        #text pre code{border:10px solid; border-color:#52b296; background-color:#b9e9dd; }
-        #models pre code{border:10px solid; border-color:#5d9cbd; background-color:#b9d6e8; }
-        #audio pre code{border:10px solid; border-color:#d3b157; background-color:#e5d7ae; }
-        #structs pre code{border:10px solid; border-color:#d2c9c6; background-color:#f8f8ff;}
-        #colors pre code{border:10px solid; border-color:#c6d2c6; background-color:#e9f1f2;}
-        #logo{width:128px; height:128px; float:left; position:relative; background-image:url(https://www.raylib.com/common/img/raylib_logo.png);}
-        #header{position:relative; height:110px; width: 1000px;}
-        #title, #plinks, #version{position:relative; float:left; margin:0px; margin-left:10px; margin-top:10px;}
-        #plinks{color: gray;}
-        #plinks a, #copyright a{color: gray; text-decoration:none;}
-        #plinks a:hover{color: black;}
-        #version {margin-top: 23px; width:500px;}
-        #pcore{margin-bottom:-12px; margin-left:12px; color:#5c5a5a;}
-        #pshapes{margin-bottom:-12px; margin-left:12px; color:#c55757;}
-        #ptextures{margin-bottom:-12px; margin-left:12px; color:#60815a;}
-        #ptext{margin-bottom:-12px; margin-left:12px; color:#377764;}
-        #pmodels{margin-bottom:-12px; margin-left:12px; color:#417794;}
-        #paudio{margin-bottom:-12px; margin-left:12px; color:#8c7539;}
-        #pstructs{margin-bottom:-12px; margin-left:12px; color:#bcbccd;}
-        #pcolors{margin-bottom:-12px; margin-left:12px; color:#bcbccd;}
+            @font-face {
+                font-family: 'grixel_acme_7_wide_xtnd';
+                src: url('https://www.raylib.com/common/font/acme_7_wide_xtnd.eot');
+                src: url('https://www.raylib.com/common/font/acme_7_wide_xtnd.eot?#iefix') format('embedded-opentype'),
+                    url('https://www.raylib.com/common/font/acme_7_wide_xtnd.woff') format('woff'),
+                    url('https://www.raylib.com/common/font/acme_7_wide_xtnd.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-size-adjust: 0.49;
+            }
 
-        #fullgroup{
-            display: grid;
-            grid-column-gap: 20px;
-            grid-template-columns: auto auto;
-        }
+            body {
+                background-color: #f5f5f5;
+            }
 
-        #copyright p{color:#8b8b8b; font-size:10px}
-        #copyright a:hover{color:black;}
+            #fulldata {
+                width: 1315px !important;
+            }
 
-        #downpdf{text-decoration: none;color:#aaaaaa;}
-        #downpdf:hover{color:#444;}
+            .eximage img {
+                margin: 0 auto;
+                border: 1px solid;
+                border-color: black;
+                width: 770px;
+                height: auto;
+            }
+
+            p {
+                font-family: grixel_acme_7_wide_xtnd, Courier New, Verdana, Arial;
+                font-size: 13px;
+                line-height: 24px;
+            }
+
+            pre code {
+                font-family: Courier New;
+                font-size: 12px;
+                width: auto !important;
+                border: 1px solid;
+                border-color: #b0b0b0;
+                width: 758px;
+                height: auto;
+            }
+
+            .exdownbtn {
+                width: 250px;
+                height: 30px;
+                float: left;
+                position: relative;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 10px;
+                line-height: 30px;
+                text-align: center;
+                border-width: 5px;
+                background-color: #e1e1e1;
+                color: #5c5a5a;
+                border: 4px solid #898888;
+                font-family: grixel_acme_7_wide_xtnd, Courier New, Verdana, Arial;
+            }
+
+            .exdownbtn:hover {
+                background-color: #f0d6d6;
+                color: #c55757;
+                border: 4px solid #e66666;
+            }
+
+            #core pre code {
+                border: 10px solid;
+                border-color: #888888;
+                background-color: #dbdbe1;
+            }
+
+            #shapes pre code {
+                border: 10px solid;
+                border-color: #e66666;
+                background-color: #e9d0d6;
+            }
+
+            #textures pre code {
+                border: 10px solid;
+                border-color: #75a06d;
+                background-color: #c3e4bf;
+            }
+
+            #text pre code {
+                border: 10px solid;
+                border-color: #52b296;
+                background-color: #b9e9dd;
+            }
+
+            #models pre code {
+                border: 10px solid;
+                border-color: #5d9cbd;
+                background-color: #b9d6e8;
+            }
+
+            #audio pre code {
+                border: 10px solid;
+                border-color: #d3b157;
+                background-color: #e5d7ae;
+            }
+
+            #structs pre code {
+                border: 10px solid;
+                border-color: #d2c9c6;
+                background-color: #f8f8ff;
+            }
+
+            #colors pre code {
+                border: 10px solid;
+                border-color: #c6d2c6;
+                background-color: #e9f1f2;
+            }
+
+            #logo {
+                width: 128px;
+                height: 128px;
+                float: left;
+                position: relative;
+                background-image: url(https://www.raylib.com/common/img/raylib_logo.png);
+            }
+
+            #header {
+                position: relative;
+                height: 110px;
+                width: 1000px;
+            }
+
+            #title,
+            #plinks,
+            #version {
+                position: relative;
+                float: left;
+                margin: 0px;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+
+            #plinks {
+                color: gray;
+            }
+
+            #plinks a,
+            #copyright a {
+                color: gray;
+                text-decoration: none;
+            }
+
+            #plinks a:hover {
+                color: black;
+            }
+
+            #version {
+                margin-top: 23px;
+                width: 500px;
+            }
+
+            #pcore {
+                margin-bottom: -12px;
+                margin-left: 12px;
+                color: #5c5a5a;
+            }
+
+            #pshapes {
+                margin-bottom: -12px;
+                margin-left: 12px;
+                color: #c55757;
+            }
+
+            #ptextures {
+                margin-bottom: -12px;
+                margin-left: 12px;
+                color: #60815a;
+            }
+
+            #ptext {
+                margin-bottom: -12px;
+                margin-left: 12px;
+                color: #377764;
+            }
+
+            #pmodels {
+                margin-bottom: -12px;
+                margin-left: 12px;
+                color: #417794;
+            }
+
+            #paudio {
+                margin-bottom: -12px;
+                margin-left: 12px;
+                color: #8c7539;
+            }
+
+            #pstructs {
+                margin-bottom: -12px;
+                margin-left: 12px;
+                color: #bcbccd;
+            }
+
+            #pcolors {
+                margin-bottom: -12px;
+                margin-left: 12px;
+                color: #bcbccd;
+            }
+
+            #fullgroup {
+                display: grid;
+                grid-column-gap: 20px;
+                grid-template-columns: auto auto;
+            }
+
+            #copyright p {
+                color: #8b8b8b;
+                font-size: 10px
+            }
+
+            #copyright a:hover {
+                color: black;
+            }
+
+            #downpdf {
+                text-decoration: none;
+                color: #aaaaaa;
+            }
+
+            #downpdf:hover {
+                color: #444;
+            }
         </style>
 
         <script type="text/javascript">
-        $(document).ready(function() {
-            $.get('raylib_core.c', function(data) {
-                $('#core pre code').text(data);
-                $('#core pre code').each(function(i, e) {hljs.highlightBlock(e)});
-            }, 'text');
-            $.get('raylib_shapes.c', function(data) {
-                $('#shapes pre code').text(data);
-                $('#shapes pre code').each(function(i, e) {hljs.highlightBlock(e)});
-            }, 'text');
-            $.get('raylib_textures.c', function(data) {
-                $('#textures pre code').text(data);
-                $('#textures pre code').each(function(i, e) {hljs.highlightBlock(e)});
-            }, 'text');
-            $.get('raylib_text.c', function(data) {
-                $('#text pre code').text(data);
-                $('#text pre code').each(function(i, e) {hljs.highlightBlock(e)});
-            }, 'text');
-            $.get('raylib_models.c', function(data) {
-                $('#models pre code').text(data);
-                $('#models pre code').each(function(i, e) {hljs.highlightBlock(e)});
-            }, 'text');
-            $.get('raylib_audio.c', function(data) {
-                $('#audio pre code').text(data);
-                $('#audio pre code').each(function(i, e) {hljs.highlightBlock(e)});
-            }, 'text');
-            $.get('raylib_colors.c', function(data) {
-                $('#colors pre code').text(data);
-                $('#colors pre code').each(function(i, e) {hljs.highlightBlock(e)});
-            }, 'text');
-            $.get('raylib_structs.c', function(data) {
-                $('#structs pre code').text(data);
-                $('#structs pre code').each(function(i, e) {hljs.highlightBlock(e)});
-            }, 'text');
-        });
+            $(document).ready(function () {
+                $.get('raylib_core.c', function (data) {
+                    $('#core pre code').text(data);
+                    $('#core pre code').each(function (i, e) { hljs.highlightBlock(e) });
+                }, 'text');
+                $.get('raylib_shapes.c', function (data) {
+                    $('#shapes pre code').text(data);
+                    $('#shapes pre code').each(function (i, e) { hljs.highlightBlock(e) });
+                }, 'text');
+                $.get('raylib_textures.c', function (data) {
+                    $('#textures pre code').text(data);
+                    $('#textures pre code').each(function (i, e) { hljs.highlightBlock(e) });
+                }, 'text');
+                $.get('raylib_text.c', function (data) {
+                    $('#text pre code').text(data);
+                    $('#text pre code').each(function (i, e) { hljs.highlightBlock(e) });
+                }, 'text');
+                $.get('raylib_models.c', function (data) {
+                    $('#models pre code').text(data);
+                    $('#models pre code').each(function (i, e) { hljs.highlightBlock(e) });
+                }, 'text');
+                $.get('raylib_audio.c', function (data) {
+                    $('#audio pre code').text(data);
+                    $('#audio pre code').each(function (i, e) { hljs.highlightBlock(e) });
+                }, 'text');
+                $.get('raylib_colors.c', function (data) {
+                    $('#colors pre code').text(data);
+                    $('#colors pre code').each(function (i, e) { hljs.highlightBlock(e) });
+                }, 'text');
+                $.get('raylib_structs.c', function (data) {
+                    $('#structs pre code').text(data);
+                    $('#structs pre code').each(function (i, e) { hljs.highlightBlock(e) });
+                }, 'text');
+            });
         </script>
     </head>
+    <!-- BEGIN -->
 
     <body>
         <div id="header">
             <a id="logo" href="https://www.raylib.com/index.html"></a>
             <p id="title">A simple and easy-to-use library to enjoy videogames programming</p>
-            <p id="plinks">[<a href="https://discord.gg/raylib">raylib Discord server</a>][<a href="https://github.com/raysan5/raylib">github.com/raysan5/raylib</a>][<a href="https://github.com/raysan5/raylib/blob/master/src/raylib.h">raylib.h</a>]</p>
+            <p id="plinks">[<a href="https://discord.gg/raylib">raylib Discord server</a>][<a
+                    href="https://github.com/raysan5/raylib">github.com/raysan5/raylib</a>][<a
+                    href="https://github.com/raysan5/raylib/blob/master/src/raylib.h">raylib.h</a>]</p>
             <p></p>
-            <p id="version">v4.0 quick reference card  [<a id="downpdf" href="https://www.raylib.com/cheatsheet/raylib_cheatsheet_v4.0.pdf">download as PDF</a>]</p>
+            <p id="version">v4.0 quick reference card [<a id="downpdf" href="https://www.raylib.com/cheatsheet/raylib_cheatsheet_v4.0.pdf">download as PDF</a>]</p>
         </div>
         <br>
         <div id="fulldata">
+
             <p id="pcore">module: core</p>
-            <div id="core"><pre><code class="cpp hljs ">
+            <div id="core">
+                <pre>
+                    <code class="cpp hljs ">
     <span class="hljs-comment">// Window-related functions</span>
     <span class="hljs-keyword">void</span> InitWindow(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *title);              <span class="hljs-comment">// Initialize window and OpenGL context</span>
     <span class="hljs-keyword">bool</span> WindowShouldClose(<span class="hljs-keyword">void</span>);                                           <span class="hljs-comment">// Check if KEY_ESCAPE pressed or Close icon pressed</span>
@@ -159,8 +342,12 @@
     <span class="hljs-keyword">void</span> SetWindowMinSize(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height);                           <span class="hljs-comment">// Set window minimum dimensions (for FLAG_WINDOW_RESIZABLE)</span>
     <span class="hljs-keyword">void</span> SetWindowSize(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height);                              <span class="hljs-comment">// Set window dimensions</span>
     <span class="hljs-keyword">void</span> *GetWindowHandle(<span class="hljs-keyword">void</span>);                                            <span class="hljs-comment">// Get native window handle</span>
+    Vector2 GetWindowPosition(<span class="hljs-keyword">void</span>);                                        <span class="hljs-comment">// Get window position XY on monitor</span>
+    Vector2 GetWindowScaleDPI(<span class="hljs-keyword">void</span>);                                        <span class="hljs-comment">// Get window scale DPI factor</span>
+    </br>
     <span class="hljs-keyword">int</span> GetScreenWidth(<span class="hljs-keyword">void</span>);                                               <span class="hljs-comment">// Get current screen width</span>
     <span class="hljs-keyword">int</span> GetScreenHeight(<span class="hljs-keyword">void</span>);                                              <span class="hljs-comment">// Get current screen height</span>
+    </br>
     <span class="hljs-keyword">int</span> GetMonitorCount(<span class="hljs-keyword">void</span>);                                              <span class="hljs-comment">// Get number of connected monitors</span>
     <span class="hljs-keyword">int</span> GetCurrentMonitor(<span class="hljs-keyword">void</span>);                                            <span class="hljs-comment">// Get current connected monitor</span>
     Vector2 GetMonitorPosition(<span class="hljs-keyword">int</span> monitor);                                <span class="hljs-comment">// Get specified monitor position</span>
@@ -169,8 +356,6 @@
     <span class="hljs-keyword">int</span> GetMonitorPhysicalWidth(<span class="hljs-keyword">int</span> monitor);                               <span class="hljs-comment">// Get specified monitor physical width in millimetres</span>
     <span class="hljs-keyword">int</span> GetMonitorPhysicalHeight(<span class="hljs-keyword">int</span> monitor);                              <span class="hljs-comment">// Get specified monitor physical height in millimetres</span>
     <span class="hljs-keyword">int</span> GetMonitorRefreshRate(<span class="hljs-keyword">int</span> monitor);                                 <span class="hljs-comment">// Get specified monitor refresh rate</span>
-    Vector2 GetWindowPosition(<span class="hljs-keyword">void</span>);                                        <span class="hljs-comment">// Get window position XY on monitor</span>
-    Vector2 GetWindowScaleDPI(<span class="hljs-keyword">void</span>);                                        <span class="hljs-comment">// Get window scale DPI factor</span>
     <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *GetMonitorName(<span class="hljs-keyword">int</span> monitor);                                <span class="hljs-comment">// Get the human-readable, UTF-8 encoded name of the primary monitor</span>
     <span class="hljs-keyword">void</span> SetClipboardText(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text);                                <span class="hljs-comment">// Set clipboard text content</span>
     <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *GetClipboardText(<span class="hljs-keyword">void</span>);                                     <span class="hljs-comment">// Get clipboard text content</span>
@@ -351,15 +536,19 @@
     <span class="hljs-keyword">void</span> SetCameraAltControl(<span class="hljs-keyword">int</span> keyAlt);                                   <span class="hljs-comment">// Set camera alt key to combine with mouse movement (free camera)</span>
     <span class="hljs-keyword">void</span> SetCameraSmoothZoomControl(<span class="hljs-keyword">int</span> keySmoothZoom);                     <span class="hljs-comment">// Set camera smooth zoom key to combine with mouse (free camera)</span>
     <span class="hljs-keyword">void</span> SetCameraMoveControls(<span class="hljs-keyword">int</span> keyFront, <span class="hljs-keyword">int</span> keyBack, <span class="hljs-keyword">int</span> keyRight, <span class="hljs-keyword">int</span> keyLeft, <span class="hljs-keyword">int</span> keyUp, <span class="hljs-keyword">int</span> keyDown); <span class="hljs-comment">// Set camera move controls (1st person and 3rd person cameras)</span>
+                    </code>
+                </pre>
+            </div>
 
-    </code></pre></div>
             <p id="pshapes">module: shapes</p>
-            <div id="shapes"><pre><code class="cpp hljs ">
+            <div id="shapes">
+                <pre>
+                    <code class="cpp hljs ">
     <span class="hljs-comment">// Set texture and rectangle to be used on shapes drawing</span>
     <span class="hljs-comment">// NOTE: It can be useful when using basic shapes and one single font,</span>
     <span class="hljs-comment">// defining a font char white rectangle would allow drawing everything in a single draw call</span>
-    <span class="hljs-keyword">void</span> SetShapesTexture(Texture2D texture, Rectangle source);
-
+    <span class="hljs-keyword">void</span> SetShapesTexture(Texture2D texture,
+    
     <span class="hljs-comment">// Basic shapes drawing functions</span>
     <span class="hljs-keyword">void</span> DrawPixel(<span class="hljs-keyword">int</span> posX, <span class="hljs-keyword">int</span> posY, Color color);                                                    <span class="hljs-comment">// Draw a pixel</span>
     <span class="hljs-keyword">void</span> DrawPixelV(Vector2 position, Color color);                                                     <span class="hljs-comment">// Draw a pixel (Vector version)</span>
@@ -397,9 +586,9 @@
     <span class="hljs-keyword">void</span> DrawTriangleStrip(Vector2 *points, <span class="hljs-keyword">int</span> pointsCount, Color color);                              <span class="hljs-comment">// Draw a triangle strip defined by points</span>
     <span class="hljs-keyword">void</span> DrawPoly(Vector2 center, <span class="hljs-keyword">int</span> sides, <span class="hljs-keyword">float</span> radius, <span class="hljs-keyword">float</span> rotation, Color color);                <span class="hljs-comment">// Draw a regular polygon (Vector version)</span>
     <span class="hljs-keyword">void</span> DrawPolyLines(Vector2 center, <span class="hljs-keyword">int</span> sides, <span class="hljs-keyword">float</span> radius, <span class="hljs-keyword">float</span> rotation, Color color);           <span class="hljs-comment">// Draw a polygon outline of n sides</span>
-    <span class="hljs-keyword">void</span> DrawPolyLinesEx(Vector2 center, <span class="hljs-keyword">int</span> sides, <span class="hljs-keyword">float</span> radius, <span class="hljs-keyword">float</span> rotation, <span class="hljs-keyword">float</span> lineThick, Color color); <span class="hljs-comment">// Draw a polygon outline of n sides with extended parameters</span>
-
-    <span class="hljs-comment">// Basic shapes collision detection functions</span>
+    <span class="hljs-keyword">void</span> DrawPolyLinesEx(Vector2 center, <span class="hljs-keyword">int</span> sides, <span class="hljs-keyword">float</span> radius, <span class="hljs-keyword">float</span> rotation, <span class="hljs-keyword">float</span> lineThick, Color color); <span class="hljs-comment">// Draw a polygon outline of n sides with extende </span>
+    
+        <span class="hljs-comment">// Basic shapes collision detection functions</span>
     <span class="hljs-keyword">bool</span> CheckCollisionRecs(Rectangle rec1, Rectangle rec2);                                            <span class="hljs-comment">// Check collision between two rectangles</span>
     <span class="hljs-keyword">bool</span> CheckCollisionCircles(Vector2 center1, <span class="hljs-keyword">float</span> radius1, Vector2 center2, <span class="hljs-keyword">float</span> radius2);         <span class="hljs-comment">// Check collision between two circles</span>
     <span class="hljs-keyword">bool</span> CheckCollisionCircleRec(Vector2 center, <span class="hljs-keyword">float</span> radius, Rectangle rec);                          <span class="hljs-comment">// Check collision between circle and rectangle</span>
@@ -409,10 +598,14 @@
     <span class="hljs-keyword">bool</span> CheckCollisionLines(Vector2 startPos1, Vector2 endPos1, Vector2 startPos2, Vector2 endPos2, Vector2 *collisionPoint); <span class="hljs-comment">// Check the collision between two lines defined by two points each, returns collision point by reference</span>
     <span class="hljs-keyword">bool</span> CheckCollisionPointLine(Vector2 point, Vector2 p1, Vector2 p2, <span class="hljs-keyword">int</span> threshold);                 <span class="hljs-comment">// Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels [threshold]</span>
     Rectangle GetCollisionRec(Rectangle rec1, Rectangle rec2);                                          <span class="hljs-comment">// Get collision rectangle for two rectangles collision</span>
+                    </code>
+                </pre>
+            </div>
 
-    </code></pre></div>
             <p id="ptextures">module: textures</p>
-            <div id="textures"><pre><code class="cpp hljs ">
+            <div id="textures">
+                <pre>
+                    <code class="cpp hljs ">
     <span class="hljs-comment">// Image loading functions</span>
     <span class="hljs-comment">// NOTE: These functions do not require GPU access</span>
     Image LoadImage(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                                             <span class="hljs-comment">// Load image from file into CPU memory (RAM)</span>
@@ -424,16 +617,15 @@
     <span class="hljs-keyword">void</span> UnloadImage(Image image);                                                                     <span class="hljs-comment">// Unload image from CPU memory (RAM)</span>
     <span class="hljs-keyword">bool</span> ExportImage(Image image, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                               <span class="hljs-comment">// Export image data to file, returns true on success</span>
     <span class="hljs-keyword">bool</span> ExportImageAsCode(Image image, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                         <span class="hljs-comment">// Export image as code file defining an array of bytes, returns true on success</span>
-
-    <span class="hljs-comment">// Image generation functions</span>
+    
+        <span class="hljs-comment">// Image generation functions</span>
     Image GenImageColor(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height, Color color);                                           <span class="hljs-comment">// Generate image: plain color</span>
     Image GenImageGradientV(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height, Color top, Color bottom);                           <span class="hljs-comment">// Generate image: vertical gradient</span>
     Image GenImageGradientH(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height, Color left, Color right);                           <span class="hljs-comment">// Generate image: horizontal gradient</span>
     Image GenImageGradientRadial(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">float</span> density, Color inner, Color outer);      <span class="hljs-comment">// Generate image: radial gradient</span>
     Image GenImageChecked(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> checksX, <span class="hljs-keyword">int</span> checksY, Color col1, Color col2);    <span class="hljs-comment">// Generate image: checked</span>
     Image GenImageWhiteNoise(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">float</span> factor);                                     <span class="hljs-comment">// Generate image: white noise</span>
-    Image GenImageCellular(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> tileSize);                                       <span class="hljs-comment">// Generate image: cellular algorithm. Bigger tileSize means bigger cells</span>
-
+    Image GenImageCellular(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> tileSize);                                       <span class="hljs-comment">// Generate image: cellular algorithm. Bigger tileSize means </span>
     <span class="hljs-comment">// Image manipulation functions</span>
     Image ImageCopy(Image image);                                                                      <span class="hljs-comment">// Create an image duplicate (useful for transformations)</span>
     Image ImageFromImage(Image image, Rectangle rec);                                                  <span class="hljs-comment">// Create an image from another image piece</span>
@@ -466,8 +658,7 @@
     <span class="hljs-keyword">void</span> UnloadImageColors(Color *colors);                                                             <span class="hljs-comment">// Unload color data loaded with LoadImageColors()</span>
     <span class="hljs-keyword">void</span> UnloadImagePalette(Color *colors);                                                            <span class="hljs-comment">// Unload colors palette loaded with LoadImagePalette()</span>
     Rectangle GetImageAlphaBorder(Image image, <span class="hljs-keyword">float</span> threshold);                                       <span class="hljs-comment">// Get image alpha border rectangle</span>
-    Color GetImageColor(Image image, <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y);                                                    <span class="hljs-comment">// Get image pixel color at (x, y) position</span>
-
+    Color GetImageColor(Image image, <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y);                                                    <span class="hljs-comment">// Get image pixel color at (x,  </span>
     <span class="hljs-comment">// Image drawing functions</span>
     <span class="hljs-comment">// NOTE: Image software-rendering functions (CPU)</span>
     <span class="hljs-keyword">void</span> ImageClearBackground(Image *dst, Color color);                                                <span class="hljs-comment">// Clear image background with given color</span>
@@ -483,8 +674,7 @@
     <span class="hljs-keyword">void</span> ImageDrawRectangleLines(Image *dst, Rectangle rec, <span class="hljs-keyword">int</span> thick, Color color);                   <span class="hljs-comment">// Draw rectangle lines within an image</span>
     <span class="hljs-keyword">void</span> ImageDraw(Image *dst, Image src, Rectangle srcRec, Rectangle dstRec, Color tint);             <span class="hljs-comment">// Draw a source image within a destination image (tint applied to source)</span>
     <span class="hljs-keyword">void</span> ImageDrawText(Image *dst, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text, <span class="hljs-keyword">int</span> posX, <span class="hljs-keyword">int</span> posY, <span class="hljs-keyword">int</span> fontSize, Color color);   <span class="hljs-comment">// Draw text (using default font) within an image (destination)</span>
-    <span class="hljs-keyword">void</span> ImageDrawTextEx(Image *dst, Font font, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text, Vector2 position, <span class="hljs-keyword">float</span> fontSize, <span class="hljs-keyword">float</span> spacing, Color tint); <span class="hljs-comment">// Draw text (custom sprite font) within an image (destination)</span>
-
+    <span class="hljs-keyword">void</span> ImageDrawTextEx(Image *dst, Font font, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text, Vector2 position, <span class="hljs-keyword">float</span> fontSize, <span class="hljs-keyword">float</span> spacing, Color tint); <span class="hljs-comment">// Draw text (custom sprite font) within an image (
     <span class="hljs-comment">// Texture loading functions</span>
     <span class="hljs-comment">// NOTE: These functions require GPU access</span>
     Texture2D LoadTexture(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                                       <span class="hljs-comment">// Load texture from file into GPU memory (VRAM)</span>
@@ -494,13 +684,11 @@
     <span class="hljs-keyword">void</span> UnloadTexture(Texture2D texture);                                                             <span class="hljs-comment">// Unload texture from GPU memory (VRAM)</span>
     <span class="hljs-keyword">void</span> UnloadRenderTexture(RenderTexture2D target);                                                  <span class="hljs-comment">// Unload render texture from GPU memory (VRAM)</span>
     <span class="hljs-keyword">void</span> UpdateTexture(Texture2D texture, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *pixels);                                         <span class="hljs-comment">// Update GPU texture with new data</span>
-    <span class="hljs-keyword">void</span> UpdateTextureRec(Texture2D texture, Rectangle rec, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *pixels);                       <span class="hljs-comment">// Update GPU texture rectangle with new data</span>
-
+    <span class="hljs-keyword">void</span> UpdateTextureRec(Texture2D texture, Rectangle rec, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *pixels);                       <span class="hljs-comment">// Update GPU texture rectangle w
     <span class="hljs-comment">// Texture configuration functions</span>
     <span class="hljs-keyword">void</span> GenTextureMipmaps(Texture2D *texture);                                                        <span class="hljs-comment">// Generate GPU mipmaps for a texture</span>
     <span class="hljs-keyword">void</span> SetTextureFilter(Texture2D texture, <span class="hljs-keyword">int</span> filter);                                              <span class="hljs-comment">// Set texture scaling filter mode</span>
-    <span class="hljs-keyword">void</span> SetTextureWrap(Texture2D texture, <span class="hljs-keyword">int</span> wrap);                                                  <span class="hljs-comment">// Set texture wrapping mode</span>
-
+    <span class="hljs-keyword">void</span> SetTextureWrap(Texture2D texture, <span class="hljs-keyword">int</span> wrap);                                                  <span class="hljs-comment">// Set texture w
     <span class="hljs-comment">// Texture drawing functions</span>
     <span class="hljs-keyword">void</span> DrawTexture(Texture2D texture, <span class="hljs-keyword">int</span> posX, <span class="hljs-keyword">int</span> posY, Color tint);                               <span class="hljs-comment">// Draw a Texture2D</span>
     <span class="hljs-keyword">void</span> DrawTextureV(Texture2D texture, Vector2 position, Color tint);                                <span class="hljs-comment">// Draw a Texture2D with position defined as Vector2</span>
@@ -510,8 +698,7 @@
     <span class="hljs-keyword">void</span> DrawTextureTiled(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, <span class="hljs-keyword">float</span> rotation, <span class="hljs-keyword">float</span> scale, Color tint);      <span class="hljs-comment">// Draw part of a texture (defined by a rectangle) with rotation and scale tiled into dest.</span>
     <span class="hljs-keyword">void</span> DrawTexturePro(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, <span class="hljs-keyword">float</span> rotation, Color tint);           <span class="hljs-comment">// Draw a part of a texture defined by a rectangle with 'pro' parameters</span>
     <span class="hljs-keyword">void</span> DrawTextureNPatch(Texture2D texture, NPatchInfo nPatchInfo, Rectangle dest, Vector2 origin, <span class="hljs-keyword">float</span> rotation, Color tint);   <span class="hljs-comment">// Draws a texture (or part of it) that stretches or shrinks nicely</span>
-    <span class="hljs-keyword">void</span> DrawTexturePoly(Texture2D texture, Vector2 center, Vector2 *points, Vector2 *texcoords, <span class="hljs-keyword">int</span> pointsCount, Color tint);      <span class="hljs-comment">// Draw a textured polygon</span>
-
+    <span class="hljs-keyword">void</span> DrawTexturePoly(Texture2D texture, Vector2 center, Vector2 *points, Vector2 *texcoords, <span class="hljs-keyword">int</span> pointsCount, Color tint);      <span class="hljs-comment">// Draw a text  </span>
     <span class="hljs-comment">// Color/pixel related functions</span>
     Color Fade(Color color, <span class="hljs-keyword">float</span> alpha);                                                              <span class="hljs-comment">// Returns color with alpha applied, alpha goes from 0.0f to 1.0f</span>
     <span class="hljs-keyword">int</span> ColorToInt(Color color);                                                                       <span class="hljs-comment">// Returns hexadecimal value for a Color</span>
@@ -525,11 +712,14 @@
     Color GetPixelColor(<span class="hljs-keyword">void</span> *srcPtr, <span class="hljs-keyword">int</span> format);                                                     <span class="hljs-comment">// Get Color from a source pixel pointer of certain format</span>
     <span class="hljs-keyword">void</span> SetPixelColor(<span class="hljs-keyword">void</span> *dstPtr, Color color, <span class="hljs-keyword">int</span> format);                                         <span class="hljs-comment">// Set color formatted into destination pixel pointer</span>
     <span class="hljs-keyword">int</span> GetPixelDataSize(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> format);                                           <span class="hljs-comment">// Get pixel data size in bytes for certain format</span>
+                    </code>
+                </pre>
+            </div>
 
-
-    </code></pre></div>
             <p id="ptext">module: text</p>
-            <div id="text"><pre><code class="cpp hljs ">
+            <div id="text">
+                <pre>
+                    <code class="cpp hljs ">
     <span class="hljs-comment">// Font loading/unloading functions</span>
     Font GetFontDefault(<span class="hljs-keyword">void</span>);                                                                      <span class="hljs-comment">// Get the default Font</span>
     Font LoadFont(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                                            <span class="hljs-comment">// Load font from file into GPU memory (VRAM)</span>
@@ -539,30 +729,26 @@
     GlyphInfo *LoadFontData(<span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *fileData, <span class="hljs-keyword">int</span> dataSize, <span class="hljs-keyword">int</span> fontSize, <span class="hljs-keyword">int</span> *fontChars, <span class="hljs-keyword">int</span> glyphCount, <span class="hljs-keyword">int</span> type);      <span class="hljs-comment">// Load font data for further use</span>
     Image GenImageFontAtlas(<span class="hljs-keyword">const</span> GlyphInfo *chars, Rectangle **recs, <span class="hljs-keyword">int</span> glyphCount, <span class="hljs-keyword">int</span> fontSize, <span class="hljs-keyword">int</span> padding, <span class="hljs-keyword">int</span> packMethod);      <span class="hljs-comment">// Generate image font atlas using chars info</span>
     <span class="hljs-keyword">void</span> UnloadFontData(GlyphInfo *chars, <span class="hljs-keyword">int</span> glyphCount);                                          <span class="hljs-comment">// Unload font chars info data (RAM)</span>
-    <span class="hljs-keyword">void</span> UnloadFont(Font font);                                                                     <span class="hljs-comment">// Unload Font from GPU memory (VRAM)</span>
-
+    <span class="hljs-keyword">void</span> UnloadFont(Font font);                                                                     <span class="hljs-comment">// Unload Font from GPU m
     <span class="hljs-comment">// Text drawing functions</span>
     <span class="hljs-keyword">void</span> DrawFPS(<span class="hljs-keyword">int</span> posX, <span class="hljs-keyword">int</span> posY);                                                               <span class="hljs-comment">// Draw current FPS</span>
     <span class="hljs-keyword">void</span> DrawText(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text, <span class="hljs-keyword">int</span> posX, <span class="hljs-keyword">int</span> posY, <span class="hljs-keyword">int</span> fontSize, Color color);                 <span class="hljs-comment">// Draw text (using default font)</span>
     <span class="hljs-keyword">void</span> DrawTextEx(Font font, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text, Vector2 position, <span class="hljs-keyword">float</span> fontSize, <span class="hljs-keyword">float</span> spacing, Color tint);  <span class="hljs-comment">// Draw text using font and additional parameters</span>
     <span class="hljs-keyword">void</span> DrawTextPro(Font font, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text, Vector2 position, Vector2 origin, <span class="hljs-keyword">float</span> rotation, <span class="hljs-keyword">float</span> fontSize, <span class="hljs-keyword">float</span> spacing, Color tint); <span class="hljs-comment">// Draw text using Font and pro parameters (rotation)</span>
-    <span class="hljs-keyword">void</span> DrawTextCodepoint(Font font, <span class="hljs-keyword">int</span> codepoint, Vector2 position, <span class="hljs-keyword">float</span> fontSize, Color tint); <span class="hljs-comment">// Draw one character (codepoint)</span>
-
+    <span class="hljs-keyword">void</span> DrawTextCodepoint(Font font, <span class="hljs-keyword">int</span> codepoint, Vector2 position, <span class="hljs-keyword">float</span> fontSize, Color tint); <span class="hljs-comment">// Draw one character
     <span class="hljs-comment">// Text misc. functions</span>
     <span class="hljs-keyword">int</span> MeasureText(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text, <span class="hljs-keyword">int</span> fontSize);                                                <span class="hljs-comment">// Measure string width for default font</span>
     Vector2 MeasureTextEx(Font font, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text, <span class="hljs-keyword">float</span> fontSize, <span class="hljs-keyword">float</span> spacing);              <span class="hljs-comment">// Measure string size for Font</span>
     <span class="hljs-keyword">int</span> GetGlyphIndex(Font font, <span class="hljs-keyword">int</span> codepoint);                                                    <span class="hljs-comment">// Get glyph index position in font for a codepoint (unicode character), fallback to '?' if not found</span>
     GlyphInfo GetGlyphInfo(Font font, <span class="hljs-keyword">int</span> codepoint);                                               <span class="hljs-comment">// Get glyph font info data for a codepoint (unicode character), fallback to '?' if not found</span>
-    Rectangle GetGlyphAtlasRec(Font font, <span class="hljs-keyword">int</span> codepoint);                                           <span class="hljs-comment">// Get glyph rectangle in font atlas for a codepoint (unicode character), fallback to '?' if not found</span>
-
+    Rectangle GetGlyphAtlasRec(Font font, <span class="hljs-keyword">int</span> codepoint);                                           <span class="hljs-comment">// Get glyph rectangle in font atlas for a codepoint (unicode character), fallback to '?'  </span>
     <span class="hljs-comment">// Text codepoints management functions (unicode characters)</span>
     <span class="hljs-keyword">int</span> *LoadCodepoints(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text, <span class="hljs-keyword">int</span> *count);                                              <span class="hljs-comment">// Load all codepoints from a UTF-8 text string, codepoints count returned by parameter</span>
     <span class="hljs-keyword">void</span> UnloadCodepoints(<span class="hljs-keyword">int</span> *codepoints);                                                         <span class="hljs-comment">// Unload codepoints data from memory</span>
     <span class="hljs-keyword">int</span> GetCodepointCount(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text);                                                        <span class="hljs-comment">// Get total number of codepoints in a UTF-8 encoded string</span>
     <span class="hljs-keyword">int</span> GetCodepoint(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text, <span class="hljs-keyword">int</span> *bytesProcessed);                                        <span class="hljs-comment">// Get next codepoint in a UTF-8 encoded string, 0x3f('?') is returned on failure</span>
     <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *CodepointToUTF8(<span class="hljs-keyword">int</span> codepoint, <span class="hljs-keyword">int</span> *byteSize);                                      <span class="hljs-comment">// Encode one codepoint into UTF-8 byte array (array length returned as parameter)</span>
-    <span class="hljs-keyword">char</span> *TextCodepointsToUTF8(<span class="hljs-keyword">int</span> *codepoints, <span class="hljs-keyword">int</span> length);                                        <span class="hljs-comment">// Encode text as codepoints array into UTF-8 text string (WARNING: memory must be freed!)</span>
-
+    <span class="hljs-keyword">char</span> *TextCodepointsToUTF8(<span class="hljs-keyword">int</span> *codepoints, <span class="hljs-keyword">int</span> length);                                        <span class="hljs-comment">// Encode text as codepoints array into UTF-8 text string (WARNING: memory mus
     <span class="hljs-comment">// Text strings management functions (no utf8 strings, only byte chars)         </span>
     <span class="hljs-comment">// NOTE: Some strings allocate memory internally for returned strings, just be careful!         </span>
     <span class="hljs-keyword">int</span> TextCopy(<span class="hljs-keyword">char</span> *dst, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *src);                                                       <span class="hljs-comment">// Copy one string to another, returns bytes copied</span>
@@ -581,9 +767,14 @@
     <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *TextToPascal(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text);                                                     <span class="hljs-comment">// Get Pascal case notation version of provided string</span>
     <span class="hljs-keyword">int</span> TextToInteger(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *text);                                                            <span class="hljs-comment">// Get integer value from text (negative values not supported)</span>
 
-    </code></pre></div>
+                    </code>
+                </pre>
+            </div>
+
             <p id="pmodels">module: models</p>
-            <div id="models"><pre><code class="cpp hljs ">
+            <div id="models">
+                <pre>
+                    <code class="cpp hljs ">
     <span class="hljs-comment">// Basic geometric 3D shapes drawing functions</span>
     <span class="hljs-keyword">void</span> DrawLine3D(Vector3 startPos, Vector3 endPos, Color color);                                    <span class="hljs-comment">// Draw a line in 3D world space</span>
     <span class="hljs-keyword">void</span> DrawPoint3D(Vector3 position, Color color);                                                   <span class="hljs-comment">// Draw a point in 3D space, actually a small line</span>
@@ -605,15 +796,13 @@
     <span class="hljs-keyword">void</span> DrawCylinderWiresEx(Vector3 startPos, Vector3 endPos, <span class="hljs-keyword">float</span> startRadius, <span class="hljs-keyword">float</span> endRadius, <span class="hljs-keyword">int</span> sides, Color color); <span class="hljs-comment">// Draw a cylinder wires with base at startPos and top at endPos</span>
     <span class="hljs-keyword">void</span> DrawPlane(Vector3 centerPos, Vector2 size, Color color);                                      <span class="hljs-comment">// Draw a plane XZ</span>
     <span class="hljs-keyword">void</span> DrawRay(Ray ray, Color color);                                                                <span class="hljs-comment">// Draw a ray line</span>
-    <span class="hljs-keyword">void</span> DrawGrid(<span class="hljs-keyword">int</span> slices, <span class="hljs-keyword">float</span> spacing);                                                          <span class="hljs-comment">// Draw a grid (centered at (0, 0, 0))</span>
-
+    <span class="hljs-keyword">void</span> DrawGrid(<span class="hljs-keyword">int</span> slices, <span class="hljs-keyword">float</span> spacing);                                                          <span class="hljs-comment">// Draw a grid (centered a
     <span class="hljs-comment">// Model loading/unloading functions</span>
     Model LoadModel(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                                             <span class="hljs-comment">// Load model from files (meshes and materials)</span>
     Model LoadModelFromMesh(Mesh mesh);                                                                <span class="hljs-comment">// Load model from generated mesh (default material)</span>
     <span class="hljs-keyword">void</span> UnloadModel(Model model);                                                                     <span class="hljs-comment">// Unload model (including meshes) from memory (RAM and/or VRAM)</span>
     <span class="hljs-keyword">void</span> UnloadModelKeepMeshes(Model model);                                                           <span class="hljs-comment">// Unload model (but not meshes) from memory (RAM and/or VRAM)</span>
-    BoundingBox GetModelBoundingBox(Model model);                                                      <span class="hljs-comment">// Compute model bounding box limits (considers all meshes)</span>
-
+    BoundingBox GetModelBoundingBox(Model model);                                                      <span class="hljs-comment">// Compute model bounding box limits (considers
     <span class="hljs-comment">// Model drawing functions</span>
     <span class="hljs-keyword">void</span> DrawModel(Model model, Vector3 position, <span class="hljs-keyword">float</span> scale, Color tint);                            <span class="hljs-comment">// Draw a model (with texture if set)</span>
     <span class="hljs-keyword">void</span> DrawModelEx(Model model, Vector3 position, Vector3 rotationAxis, <span class="hljs-keyword">float</span> rotationAngle, Vector3 scale, Color tint); <span class="hljs-comment">// Draw a model with extended parameters</span>
@@ -622,8 +811,7 @@
     <span class="hljs-keyword">void</span> DrawBoundingBox(BoundingBox box, Color color);                                                <span class="hljs-comment">// Draw bounding box (wires)</span>
     <span class="hljs-keyword">void</span> DrawBillboard(Camera camera, Texture2D texture, Vector3 position, <span class="hljs-keyword">float</span> size, Color tint);    <span class="hljs-comment">// Draw a billboard texture</span>
     <span class="hljs-keyword">void</span> DrawBillboardRec(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector2 size, Color tint); <span class="hljs-comment">// Draw a billboard texture defined by source</span>
-    <span class="hljs-keyword">void</span> DrawBillboardPro(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector3 up, Vector2 size, Vector2 origin, <span class="hljs-keyword">float</span> rotation, Color tint); <span class="hljs-comment">// Draw a billboard texture defined by source and rotation</span>
-
+    <span class="hljs-keyword">void</span> DrawBillboardPro(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector3 up, Vector2 size, Vector2 origin, <span class="hljs-keyword">float</span> rotation, Color tint); <span class="hljs-comment">// Draw a billboard texture defined by source 
     <span class="hljs-comment">// Mesh management functions</span>
     <span class="hljs-keyword">void</span> UploadMesh(Mesh *mesh, <span class="hljs-keyword">bool</span> dynamic);                                                         <span class="hljs-comment">// Upload mesh vertex data in GPU and provide VAO/VBO ids</span>
     <span class="hljs-keyword">void</span> UpdateMeshBuffer(Mesh mesh, <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">void</span> *data, <span class="hljs-keyword">int</span> dataSize, <span class="hljs-keyword">int</span> offset);                 <span class="hljs-comment">// Update mesh vertex data in GPU for a specific buffer index</span>
@@ -633,8 +821,7 @@
     <span class="hljs-keyword">bool</span> ExportMesh(Mesh mesh, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                                  <span class="hljs-comment">// Export mesh data to file, returns true on success</span>
     BoundingBox GetMeshBoundingBox(Mesh mesh);                                                         <span class="hljs-comment">// Compute mesh bounding box limits</span>
     <span class="hljs-keyword">void</span> GenMeshTangents(Mesh *mesh);                                                                  <span class="hljs-comment">// Compute mesh tangents</span>
-    <span class="hljs-keyword">void</span> GenMeshBinormals(Mesh *mesh);                                                                 <span class="hljs-comment">// Compute mesh binormals</span>
-
+    <span class="hljs-keyword">void</span> GenMeshBinormals(Mesh *mesh);                                                                 <span class="hljs-comment">// Compute me
     <span class="hljs-comment">// Mesh generation functions</span>
     Mesh GenMeshPoly(<span class="hljs-keyword">int</span> sides, <span class="hljs-keyword">float</span> radius);                                                         <span class="hljs-comment">// Generate polygonal mesh</span>
     Mesh GenMeshPlane(<span class="hljs-keyword">float</span> width, <span class="hljs-keyword">float</span> length, <span class="hljs-keyword">int</span> resX, <span class="hljs-keyword">int</span> resZ);                                  <span class="hljs-comment">// Generate plane mesh (with subdivisions)</span>
@@ -646,22 +833,19 @@
     Mesh GenMeshTorus(<span class="hljs-keyword">float</span> radius, <span class="hljs-keyword">float</span> size, <span class="hljs-keyword">int</span> radSeg, <span class="hljs-keyword">int</span> sides);                                <span class="hljs-comment">// Generate torus mesh</span>
     Mesh GenMeshKnot(<span class="hljs-keyword">float</span> radius, <span class="hljs-keyword">float</span> size, <span class="hljs-keyword">int</span> radSeg, <span class="hljs-keyword">int</span> sides);                                 <span class="hljs-comment">// Generate trefoil knot mesh</span>
     Mesh GenMeshHeightmap(Image heightmap, Vector3 size);                                              <span class="hljs-comment">// Generate heightmap mesh from image data</span>
-    Mesh GenMeshCubicmap(Image cubicmap, Vector3 cubeSize);                                            <span class="hljs-comment">// Generate cubes-based map mesh from image data</span>
-
+    Mesh GenMeshCubicmap(Image cubicmap, Vector3 cubeSize);                                            <span class="hljs-comment">// Generate cubes-based map mesh fro
     <span class="hljs-comment">// Material loading/unloading functions</span>
     Material *LoadMaterials(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName, <span class="hljs-keyword">int</span> *materialCount);                                 <span class="hljs-comment">// Load materials from model file</span>
     Material LoadMaterialDefault(<span class="hljs-keyword">void</span>);                                                                <span class="hljs-comment">// Load default material (Supports: DIFFUSE, SPECULAR, NORMAL maps)</span>
     <span class="hljs-keyword">void</span> UnloadMaterial(Material material);                                                            <span class="hljs-comment">// Unload material from GPU memory (VRAM)</span>
     <span class="hljs-keyword">void</span> SetMaterialTexture(Material *material, <span class="hljs-keyword">int</span> mapType, Texture2D texture);                       <span class="hljs-comment">// Set texture for a material map type (MATERIAL_MAP_DIFFUSE, MATERIAL_MAP_SPECULAR...)</span>
-    <span class="hljs-keyword">void</span> SetModelMeshMaterial(Model *model, <span class="hljs-keyword">int</span> meshId, <span class="hljs-keyword">int</span> materialId);                               <span class="hljs-comment">// Set material for a mesh</span>
-
+    <span class="hljs-keyword">void</span> SetModelMeshMaterial(Model *model, <span class="hljs-keyword">int</span> meshId, <span class="hljs-keyword">int</span> materialId);                               <span class="hljs-comment">// Set materia
     <span class="hljs-comment">// Model animations loading/unloading functions</span>
     ModelAnimation *LoadModelAnimations(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> *animCount);                <span class="hljs-comment">// Load model animations from file</span>
     <span class="hljs-keyword">void</span> UpdateModelAnimation(Model model, ModelAnimation anim, <span class="hljs-keyword">int</span> frame);                            <span class="hljs-comment">// Update model animation pose</span>
     <span class="hljs-keyword">void</span> UnloadModelAnimation(ModelAnimation anim);                                                    <span class="hljs-comment">// Unload animation data</span>
     <span class="hljs-keyword">void</span> UnloadModelAnimations(ModelAnimation* animations, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> count);                        <span class="hljs-comment">// Unload animation array data</span>
-    <span class="hljs-keyword">bool</span> IsModelAnimationValid(Model model, ModelAnimation anim);                                      <span class="hljs-comment">// Check model animation skeleton match</span>
-
+    <span class="hljs-keyword">bool</span> IsModelAnimationValid(Model model, ModelAnimation anim);                                      <span class="hljs-comment">// Check model animation sk
     <span class="hljs-comment">// Collision detection functions</span>
     <span class="hljs-keyword">bool</span> CheckCollisionSpheres(Vector3 center1, <span class="hljs-keyword">float</span> radius1, Vector3 center2, <span class="hljs-keyword">float</span> radius2);        <span class="hljs-comment">// Check collision between two spheres</span>
     <span class="hljs-keyword">bool</span> CheckCollisionBoxes(BoundingBox box1, BoundingBox box2);                                      <span class="hljs-comment">// Check collision between two bounding boxes</span>
@@ -672,173 +856,171 @@
     RayCollision GetRayCollisionMesh(Ray ray, Mesh mesh, Matrix transform);                            <span class="hljs-comment">// Get collision info between ray and mesh</span>
     RayCollision GetRayCollisionTriangle(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3);                 <span class="hljs-comment">// Get collision info between ray and triangle</span>
     RayCollision GetRayCollisionQuad(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4);         <span class="hljs-comment">// Get collision info between ray and quad</span>
-
-    </code></pre></div>
+                    </code>
+                </pre>
+            </div>
             <p id="paudio">module: audio</p>
-            <div id="audio"><pre><code class="cpp hljs ">
-    <span class="hljs-comment">// Audio device management functions</span>
-    <span class="hljs-keyword">void</span> LoadAudioDevice(<span class="hljs-keyword">void</span>);                                                     <span class="hljs-comment">// Initialize audio device and context</span>
-    <span class="hljs-keyword">void</span> CloseAudioDevice(<span class="hljs-keyword">void</span>);                                                    <span class="hljs-comment">// Close the audio device and context</span>
-    <span class="hljs-keyword">bool</span> IsAudioDeviceReady(<span class="hljs-keyword">void</span>);                                                  <span class="hljs-comment">// Check if audio device has been initialized successfully</span>
-    <span class="hljs-keyword">void</span> SetMasterVolume(<span class="hljs-keyword">float</span> volume);                                             <span class="hljs-comment">// Set master volume (listener)</span>
+            <div id="audio">
+                <pre>
+                    <code class="cpp hljs ">
+                        <span class="hljs-comment">// Audio device management functions</span>
+                        <span class="hljs-keyword">void</span> LoadAudioDevice(<span class="hljs-keyword">void</span>);                                                     <span class="hljs-comment">// Initialize audio device and context</span>
+                        <span class="hljs-keyword">void</span> CloseAudioDevice(<span class="hljs-keyword">void</span>);                                                    <span class="hljs-comment">// Close the audio device and context</span>
+                        <span class="hljs-keyword">bool</span> IsAudioDeviceReady(<span class="hljs-keyword">void</span>);                                                  <span class="hljs-comment">// Check if audio device has been initialized successfully</span>
+                        <span class="hljs-keyword">void</span> SetMasterVolume(<span class="hljs-keyword">float</span> volume);                                             <span class="hljs-comment">// Set master volume (listener)</span>
 
-    <span class="hljs-comment">// Wave/Sound loading/unloading functions</span>
-    Wave LoadWave(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                            <span class="hljs-comment">// Load wave data from file</span>
-    Wave LoadWaveFromMemory(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileType, <span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *fileData, <span class="hljs-keyword">int</span> dataSize); <span class="hljs-comment">// Load wave from memory buffer</span>
-    Sound LoadSound(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                          <span class="hljs-comment">// Load sound from file</span>
-    Sound LoadSoundFromWave(Wave wave);                                             <span class="hljs-comment">// Load sound from wave data</span>
-    <span class="hljs-keyword">void</span> UpdateSound(Sound sound, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *data, <span class="hljs-keyword">int</span> samplesCount);              <span class="hljs-comment">// Update sound buffer with new data</span>
-    <span class="hljs-keyword">void</span> UnloadWave(Wave wave);                                                     <span class="hljs-comment">// Unload wave data</span>
-    <span class="hljs-keyword">void</span> UnloadSound(Sound sound);                                                  <span class="hljs-comment">// Unload sound</span>
-    <span class="hljs-keyword">bool</span> ExportWave(Wave wave, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                               <span class="hljs-comment">// Export wave data to file, returns true on success</span>
-    <span class="hljs-keyword">bool</span> ExportWaveAsCode(Wave wave, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                         <span class="hljs-comment">// Export wave sample data to code (.h), returns true on success</span>
+                        <span class="hljs-comment">// Wave/Sound loading/unloading functions</span>
+                        Wave LoadWave(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                            <span class="hljs-comment">// Load wave data from file</span>
+                        Wave LoadWaveFromMemory(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileType, <span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *fileData, <span class="hljs-keyword">int</span> dataSize); <span class="hljs-comment">// Load wave from memory buffer</span>
+                        Sound LoadSound(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                          <span class="hljs-comment">// Load sound from file</span>
+                        Sound LoadSoundFromWave(Wave wave);                                             <span class="hljs-comment">// Load sound from wave data</span>
+                        <span class="hljs-keyword">void</span> UpdateSound(Sound sound, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *data, <span class="hljs-keyword">int</span> samplesCount);              <span class="hljs-comment">// Update sound buffer with new data</span>
+                        <span class="hljs-keyword">void</span> UnloadWave(Wave wave);                                                     <span class="hljs-comment">// Unload wave data</span>
+                        <span class="hljs-keyword">void</span> UnloadSound(Sound sound);                                                  <span class="hljs-comment">// Unload sound</span>
+                        <span class="hljs-keyword">bool</span> ExportWave(Wave wave, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                               <span class="hljs-comment">// Export wave data to file, returns true on success</span>
+                        <span class="hljs-keyword">bool</span> ExportWaveAsCode(Wave wave, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                         <span class="hljs-comment">// Export wave sample data to code (.h), returns true on success</span>
 
-    <span class="hljs-comment">// Wave/Sound management functions</span>
-    <span class="hljs-keyword">void</span> PlaySound(Sound sound);                                                    <span class="hljs-comment">// Play a sound</span>
-    <span class="hljs-keyword">void</span> StopSound(Sound sound);                                                    <span class="hljs-comment">// Stop playing a sound</span>
-    <span class="hljs-keyword">void</span> PauseSound(Sound sound);                                                   <span class="hljs-comment">// Pause a sound</span>
-    <span class="hljs-keyword">void</span> ResumeSound(Sound sound);                                                  <span class="hljs-comment">// Resume a paused sound</span>
-    <span class="hljs-keyword">void</span> PlaySoundMulti(Sound sound);                                               <span class="hljs-comment">// Play a sound (using multichannel buffer pool)</span>
-    <span class="hljs-keyword">void</span> StopSoundMulti(<span class="hljs-keyword">void</span>);                                                      <span class="hljs-comment">// Stop any sound playing (using multichannel buffer pool)</span>
-    <span class="hljs-keyword">int</span> GetSoundsPlaying(<span class="hljs-keyword">void</span>);                                                     <span class="hljs-comment">// Get number of sounds playing in the multichannel</span>
-    <span class="hljs-keyword">bool</span> IsSoundPlaying(Sound sound);                                               <span class="hljs-comment">// Check if a sound is currently playing</span>
-    <span class="hljs-keyword">void</span> SetSoundVolume(Sound sound, <span class="hljs-keyword">float</span> volume);                                 <span class="hljs-comment">// Set volume for a sound (1.0 is max level)</span>
-    <span class="hljs-keyword">void</span> SetSoundPitch(Sound sound, <span class="hljs-keyword">float</span> pitch);                                   <span class="hljs-comment">// Set pitch for a sound (1.0 is base level)</span>
-    <span class="hljs-keyword">void</span> WaveFormat(Wave *wave, <span class="hljs-keyword">int</span> sampleRate, <span class="hljs-keyword">int</span> sampleSize, <span class="hljs-keyword">int</span> channels);      <span class="hljs-comment">// Convert wave data to desired format</span>
-    Wave WaveCopy(Wave wave);                                                       <span class="hljs-comment">// Copy a wave to a new wave</span>
-    <span class="hljs-keyword">void</span> WaveCrop(Wave *wave, <span class="hljs-keyword">int</span> initSample, <span class="hljs-keyword">int</span> finalSample);                     <span class="hljs-comment">// Crop a wave to defined samples range</span>
-    <span class="hljs-keyword">float</span> *LoadWaveSamples(Wave wave);                                              <span class="hljs-comment">// Load samples data from wave as a floats array</span>
-    <span class="hljs-keyword">void</span> UnloadWaveSamples(<span class="hljs-keyword">float</span> *samples);                                         <span class="hljs-comment">// Unload samples data loaded with LoadWaveSamples()</span>
+                        <span class="hljs-comment">// Wave/Sound management functions</span>
+                        <span class="hljs-keyword">void</span> PlaySound(Sound sound);                                                    <span class="hljs-comment">// Play a sound</span>
+                        <span class="hljs-keyword">void</span> StopSound(Sound sound);                                                    <span class="hljs-comment">// Stop playing a sound</span>
+                        <span class="hljs-keyword">void</span> PauseSound(Sound sound);                                                   <span class="hljs-comment">// Pause a sound</span>
+                        <span class="hljs-keyword">void</span> ResumeSound(Sound sound);                                                  <span class="hljs-comment">// Resume a paused sound</span>
+                        <span class="hljs-keyword">void</span> PlaySoundMulti(Sound sound);                                               <span class="hljs-comment">// Play a sound (using multichannel buffer pool)</span>
+                        <span class="hljs-keyword">void</span> StopSoundMulti(<span class="hljs-keyword">void</span>);                                                      <span class="hljs-comment">// Stop any sound playing (using multichannel buffer pool)</span>
+                        <span class="hljs-keyword">int</span> GetSoundsPlaying(<span class="hljs-keyword">void</span>);                                                     <span class="hljs-comment">// Get number of sounds playing in the multichannel</span>
+                        <span class="hljs-keyword">bool</span> IsSoundPlaying(Sound sound);                                               <span class="hljs-comment">// Check if a sound is currently playing</span>
+                        <span class="hljs-keyword">void</span> SetSoundVolume(Sound sound, <span class="hljs-keyword">float</span> volume);                                 <span class="hljs-comment">// Set volume for a sound (1.0 is max level)</span>
+                        <span class="hljs-keyword">void</span> SetSoundPitch(Sound sound, <span class="hljs-keyword">float</span> pitch);                                   <span class="hljs-comment">// Set pitch for a sound (1.0 is base level)</span>
+                        <span class="hljs-keyword">void</span> WaveFormat(Wave *wave, <span class="hljs-keyword">int</span> sampleRate, <span class="hljs-keyword">int</span> sampleSize, <span class="hljs-keyword">int</span> channels);      <span class="hljs-comment">// Convert wave data to desired format</span>
+                        Wave WaveCopy(Wave wave);                                                       <span class="hljs-comment">// Copy a wave to a new wave</span>
+                        <span class="hljs-keyword">void</span> WaveCrop(Wave *wave, <span class="hljs-keyword">int</span> initSample, <span class="hljs-keyword">int</span> finalSample);                     <span class="hljs-comment">// Crop a wave to defined samples range</span>
+                        <span class="hljs-keyword">float</span> *LoadWaveSamples(Wave wave);                                              <span class="hljs-comment">// Load samples data from wave as a floats array</span>
+                        <span class="hljs-keyword">void</span> UnloadWaveSamples(<span class="hljs-keyword">float</span> *samples);                                         <span class="hljs-comment">// Unload samples data loaded with LoadWaveSamples()</span>
 
-    <span class="hljs-comment">// Music management functions</span>
-    Music LoadMusicStream(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                    <span class="hljs-comment">// Load music stream from file</span>
-    Music LoadMusicStreamFromMemory(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileType, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *data, <span class="hljs-keyword">int</span> dataSize); <span class="hljs-comment">// Load music stream from data</span>
-    <span class="hljs-keyword">void</span> UnloadMusicStream(Music music);                                            <span class="hljs-comment">// Unload music stream</span>
-    <span class="hljs-keyword">void</span> PlayMusicStream(Music music);                                              <span class="hljs-comment">// Start music playing</span>
-    <span class="hljs-keyword">bool</span> IsMusicStreamPlaying(Music music);                                         <span class="hljs-comment">// Check if music is playing</span>
-    <span class="hljs-keyword">void</span> UpdateMusicStream(Music music);                                            <span class="hljs-comment">// Updates buffers for music streaming</span>
-    <span class="hljs-keyword">void</span> StopMusicStream(Music music);                                              <span class="hljs-comment">// Stop music playing</span>
-    <span class="hljs-keyword">void</span> PauseMusicStream(Music music);                                             <span class="hljs-comment">// Pause music playing</span>
-    <span class="hljs-keyword">void</span> ResumeMusicStream(Music music);                                            <span class="hljs-comment">// Resume playing paused music</span>
-    <span class="hljs-keyword">void</span> SeekMusicStream(Music music, <span class="hljs-keyword">float</span> position);                              <span class="hljs-comment">// Seek music to a position (in seconds)</span>
-    <span class="hljs-keyword">void</span> SetMusicVolume(Music music, <span class="hljs-keyword">float</span> volume);                                 <span class="hljs-comment">// Set volume for music (1.0 is max level)</span>
-    <span class="hljs-keyword">void</span> SetMusicPitch(Music music, <span class="hljs-keyword">float</span> pitch);                                   <span class="hljs-comment">// Set pitch for a music (1.0 is base level)</span>
-    <span class="hljs-keyword">float</span> GetMusicTimeLength(Music music);                                          <span class="hljs-comment">// Get music time length (in seconds)</span>
-    <span class="hljs-keyword">float</span> GetMusicTimePlayed(Music music);                                          <span class="hljs-comment">// Get current music time played (in seconds)</span>
+                        <span class="hljs-comment">// Music management functions</span>
+                        Music LoadMusicStream(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileName);                                    <span class="hljs-comment">// Load music stream from file</span>
+                        Music LoadMusicStreamFromMemory(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fileType, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *data, <span class="hljs-keyword">int</span> dataSize); <span class="hljs-comment">// Load music stream from data</span>
+                        <span class="hljs-keyword">void</span> UnloadMusicStream(Music music);                                            <span class="hljs-comment">// Unload music stream</span>
+                        <span class="hljs-keyword">void</span> PlayMusicStream(Music music);                                              <span class="hljs-comment">// Start music playing</span>
+                        <span class="hljs-keyword">bool</span> IsMusicStreamPlaying(Music music);                                         <span class="hljs-comment">// Check if music is playing</span>
+                        <span class="hljs-keyword">void</span> UpdateMusicStream(Music music);                                            <span class="hljs-comment">// Updates buffers for music streaming</span>
+                        <span class="hljs-keyword">void</span> StopMusicStream(Music music);                                              <span class="hljs-comment">// Stop music playing</span>
+                        <span class="hljs-keyword">void</span> PauseMusicStream(Music music);                                             <span class="hljs-comment">// Pause music playing</span>
+                        <span class="hljs-keyword">void</span> ResumeMusicStream(Music music);                                            <span class="hljs-comment">// Resume playing paused music</span>
+                        <span class="hljs-keyword">void</span> SeekMusicStream(Music music, <span class="hljs-keyword">float</span> position);                              <span class="hljs-comment">// Seek music to a position (in seconds)</span>
+                        <span class="hljs-keyword">void</span> SetMusicVolume(Music music, <span class="hljs-keyword">float</span> volume);                                 <span class="hljs-comment">// Set volume for music (1.0 is max level)</span>
+                        <span class="hljs-keyword">void</span> SetMusicPitch(Music music, <span class="hljs-keyword">float</span> pitch);                                   <span class="hljs-comment">// Set pitch for a music (1.0 is base level)</span>
+                        <span class="hljs-keyword">float</span> GetMusicTimeLength(Music music);                                          <span class="hljs-comment">// Get music time length (in seconds)</span>
+                        <span class="hljs-keyword">float</span> GetMusicTimePlayed(Music music);                                          <span class="hljs-comment">// Get current music time played (in seconds)</span>
 
-    <span class="hljs-comment">// AudioStream management functions</span>
-    AudioStream InitAudioStream(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> sampleRate, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> sampleSize, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> channels); <span class="hljs-comment">// Init audio stream (to stream raw audio pcm data)</span>
-    <span class="hljs-keyword">void</span> UpdateAudioStream(AudioStream stream, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *data, <span class="hljs-keyword">int</span> samplesCount); <span class="hljs-comment">// Update audio stream buffers with data</span>
-    <span class="hljs-keyword">void</span> CloseAudioStream(AudioStream stream);                                      <span class="hljs-comment">// Close audio stream and free memory</span>
-    <span class="hljs-keyword">bool</span> IsAudioStreamProcessed(AudioStream stream);                                <span class="hljs-comment">// Check if any audio stream buffers requires refill</span>
-    <span class="hljs-keyword">void</span> PlayAudioStream(AudioStream stream);                                       <span class="hljs-comment">// Play audio stream</span>
-    <span class="hljs-keyword">void</span> PauseAudioStream(AudioStream stream);                                      <span class="hljs-comment">// Pause audio stream</span>
-    <span class="hljs-keyword">void</span> ResumeAudioStream(AudioStream stream);                                     <span class="hljs-comment">// Resume audio stream</span>
-    <span class="hljs-keyword">bool</span> IsAudioStreamPlaying(AudioStream stream);                                  <span class="hljs-comment">// Check if audio stream is playing</span>
-    <span class="hljs-keyword">void</span> StopAudioStream(AudioStream stream);                                       <span class="hljs-comment">// Stop audio stream</span>
-    <span class="hljs-keyword">void</span> SetAudioStreamVolume(AudioStream stream, <span class="hljs-keyword">float</span> volume);                    <span class="hljs-comment">// Set volume for audio stream (1.0 is max level)</span>
-    <span class="hljs-keyword">void</span> SetAudioStreamPitch(AudioStream stream, <span class="hljs-keyword">float</span> pitch);                      <span class="hljs-comment">// Set pitch for audio stream (1.0 is base level)</span>
-    <span class="hljs-keyword">void</span> SetAudioStreamBufferSizeDefault(<span class="hljs-keyword">int</span> size);                                 <span class="hljs-comment">// Default size for new audio streams</span>
-
-    </code></pre></div>
+                        <span class="hljs-comment">// AudioStream management functions</span>
+                        AudioStream InitAudioStream(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> sampleRate, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> sampleSize, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> channels); <span class="hljs-comment">// Init audio stream (to stream raw audio pcm data)</span>
+                        <span class="hljs-keyword">void</span> UpdateAudioStream(AudioStream stream, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *data, <span class="hljs-keyword">int</span> samplesCount); <span class="hljs-comment">// Update audio stream buffers with data</span>
+                        <span class="hljs-keyword">void</span> CloseAudioStream(AudioStream stream);                                      <span class="hljs-comment">// Close audio stream and free memory</span>
+                        <span class="hljs-keyword">bool</span> IsAudioStreamProcessed(AudioStream stream);                                <span class="hljs-comment">// Check if any audio stream buffers requires refill</span>
+                        <span class="hljs-keyword">void</span> PlayAudioStream(AudioStream stream);                                       <span class="hljs-comment">// Play audio stream</span>
+                        <span class="hljs-keyword">void</span> PauseAudioStream(AudioStream stream);                                      <span class="hljs-comment">// Pause audio stream</span>
+                        <span class="hljs-keyword">void</span> ResumeAudioStream(AudioStream stream);                                     <span class="hljs-comment">// Resume audio stream</span>
+                        <span class="hljs-keyword">bool</span> IsAudioStreamPlaying(AudioStream stream);                                  <span class="hljs-comment">// Check if audio stream is playing</span>
+                        <span class="hljs-keyword">void</span> StopAudioStream(AudioStream stream);                                       <span class="hljs-comment">// Stop audio stream</span>
+                        <span class="hljs-keyword">void</span> SetAudioStreamVolume(AudioStream stream, <span class="hljs-keyword">float</span> volume);                    <span class="hljs-comment">// Set volume for audio stream (1.0 is max level)</span>
+                        <span class="hljs-keyword">void</span> SetAudioStreamPitch(AudioStream stream, <span class="hljs-keyword">float</span> pitch);                      <span class="hljs-comment">// Set pitch for audio stream (1.0 is base level)</span>
+                        <span class="hljs-keyword">void</span> SetAudioStreamBufferSizeDefault(<span class="hljs-keyword">int</span> size);                                 <span class="hljs-comment">// Default size for new audio streams</span>
+                    </code>
+                </pre>
+            </div>
 
             <div id="fullgroup">
                 <div class="leftgroup">
                     <p id="pstructs">structs</p>
-                    <div id="structs"><pre><code class="cpp hljs ">
-    <span class="hljs-keyword">struct</span> Vector2;         <span class="hljs-comment">// Vector2 type</span>
-    <span class="hljs-keyword">struct</span> Vector3;         <span class="hljs-comment">// Vector3 type</span>
-    <span class="hljs-keyword">struct</span> Vector4;         <span class="hljs-comment">// Vector4 type</span>
-    <span class="hljs-keyword">struct</span> Quaternion;      <span class="hljs-comment">// Quaternion type</span>
-    <span class="hljs-keyword">struct</span> Matrix;          <span class="hljs-comment">// Matrix type (OpenGL style 4x4)</span>
-    <span class="hljs-keyword">struct</span> Color;           <span class="hljs-comment">// Color type, RGBA (32bit)</span>
-    <span class="hljs-keyword">struct</span> Rectangle;       <span class="hljs-comment">// Rectangle type</span>
+                    <div id="structs">
+                        <pre>
+                            <code class="cpp hljs ">
+                                <span class="hljs-keyword">struct</span> Vector2;         <span class="hljs-comment">// Vector2 type</span>
+                                <span class="hljs-keyword">struct</span> Vector3;         <span class="hljs-comment">// Vector3 type</span>
+                                <span class="hljs-keyword">struct</span> Vector4;         <span class="hljs-comment">// Vector4 type</span>
+                                <span class="hljs-keyword">struct</span> Quaternion;      <span class="hljs-comment">// Quaternion type</span>
+                                <span class="hljs-keyword">struct</span> Matrix;          <span class="hljs-comment">// Matrix type (OpenGL style 4x4)</span>
+                                <span class="hljs-keyword">struct</span> Color;           <span class="hljs-comment">// Color type, RGBA (32bit)</span>
+                                <span class="hljs-keyword">struct</span> Rectangle;       <span class="hljs-comment">// Rectangle type</span>
 
-    <span class="hljs-keyword">struct</span> Image;           <span class="hljs-comment">// Image type (multiple pixel formats supported)</span>
-                            <span class="hljs-comment">// NOTE: Data stored in CPU memory (RAM)               </span>
-    <span class="hljs-keyword">struct</span> Texture;         <span class="hljs-comment">// Texture type (multiple internal formats supported)</span>
-                            <span class="hljs-comment">// NOTE: Data stored in GPU memory (VRAM)</span>
-    <span class="hljs-keyword">struct</span> RenderTexture;   <span class="hljs-comment">// RenderTexture type, for texture rendering</span>
-    <span class="hljs-keyword">struct</span> NPatchInfo;      <span class="hljs-comment">// N-Patch layout info</span>
-    <span class="hljs-keyword">struct</span> GlyphInfo;       <span class="hljs-comment">// Font character glyph info</span>
-    <span class="hljs-keyword">struct</span> Font;            <span class="hljs-comment">// Font type, includes texture and chars data</span>
+                                <span class="hljs-keyword">struct</span> Image;           <span class="hljs-comment">// Image type (multiple pixel formats supported)</span>
+                                                        <span class="hljs-comment">// NOTE: Data stored in CPU memory (RAM)               </span>
+                                <span class="hljs-keyword">struct</span> Texture;         <span class="hljs-comment">// Texture type (multiple internal formats supported)</span>
+                                                        <span class="hljs-comment">// NOTE: Data stored in GPU memory (VRAM)</span>
+                                <span class="hljs-keyword">struct</span> RenderTexture;   <span class="hljs-comment">// RenderTexture type, for texture rendering</span>
+                                <span class="hljs-keyword">struct</span> NPatchInfo;      <span class="hljs-comment">// N-Patch layout info</span>
+                                <span class="hljs-keyword">struct</span> GlyphInfo;       <span class="hljs-comment">// Font character glyph info</span>
+                                <span class="hljs-keyword">struct</span> Font;            <span class="hljs-comment">// Font type, includes texture and chars data</span>
 
-    <span class="hljs-keyword">struct</span> Camera;          <span class="hljs-comment">// Camera type, defines 3d camera position/orientation</span>
-    <span class="hljs-keyword">struct</span> Camera2D;        <span class="hljs-comment">// Camera2D type, defines a 2d camera</span>
-    <span class="hljs-keyword">struct</span> Mesh;            <span class="hljs-comment">// Vertex data definning a mesh</span>
-    <span class="hljs-keyword">struct</span> Shader;          <span class="hljs-comment">// Shader type (generic shader)</span>
-    <span class="hljs-keyword">struct</span> MaterialMap;     <span class="hljs-comment">// Material texture map</span>
-    <span class="hljs-keyword">struct</span> Material;        <span class="hljs-comment">// Material type</span>
-    <span class="hljs-keyword">struct</span> Model;           <span class="hljs-comment">// Basic 3d Model type</span>
-    <span class="hljs-keyword">struct</span> Transform;       <span class="hljs-comment">// Transformation (used for bones)</span>
-    <span class="hljs-keyword">struct</span> BoneInfo;        <span class="hljs-comment">// Bone information</span>
-    <span class="hljs-keyword">struct</span> ModelAnimation;  <span class="hljs-comment">// Model animation data (bones and frames)</span>
-    <span class="hljs-keyword">struct</span> Ray;             <span class="hljs-comment">// Ray type (useful for raycast)</span>
-    <span class="hljs-keyword">struct</span> RayCollision;    <span class="hljs-comment">// Raycast hit information</span>
-    <span class="hljs-keyword">struct</span> BoundingBox;     <span class="hljs-comment">// Bounding box type for 3d mesh</span>
+                                <span class="hljs-keyword">struct</span> Camera;          <span class="hljs-comment">// Camera type, defines 3d camera position/orientation</span>
+                                <span class="hljs-keyword">struct</span> Camera2D;        <span class="hljs-comment">// Camera2D type, defines a 2d camera</span>
+                                <span class="hljs-keyword">struct</span> Mesh;            <span class="hljs-comment">// Vertex data definning a mesh</span>
+                                <span class="hljs-keyword">struct</span> Shader;          <span class="hljs-comment">// Shader type (generic shader)</span>
+                                <span class="hljs-keyword">struct</span> MaterialMap;     <span class="hljs-comment">// Material texture map</span>
+                                <span class="hljs-keyword">struct</span> Material;        <span class="hljs-comment">// Material type</span>
+                                <span class="hljs-keyword">struct</span> Model;           <span class="hljs-comment">// Basic 3d Model type</span>
+                                <span class="hljs-keyword">struct</span> Transform;       <span class="hljs-comment">// Transformation (used for bones)</span>
+                                <span class="hljs-keyword">struct</span> BoneInfo;        <span class="hljs-comment">// Bone information</span>
+                                <span class="hljs-keyword">struct</span> ModelAnimation;  <span class="hljs-comment">// Model animation data (bones and frames)</span>
+                                <span class="hljs-keyword">struct</span> Ray;             <span class="hljs-comment">// Ray type (useful for raycast)</span>
+                                <span class="hljs-keyword">struct</span> RayCollision;    <span class="hljs-comment">// Raycast hit information</span>
+                                <span class="hljs-keyword">struct</span> BoundingBox;     <span class="hljs-comment">// Bounding box type for 3d mesh</span>
 
-    <span class="hljs-keyword">struct</span> Wave;            <span class="hljs-comment">// Wave type, defines audio wave data</span>
-    <span class="hljs-keyword">struct</span> Sound;           <span class="hljs-comment">// Basic Sound source and buffer</span>
-    <span class="hljs-keyword">struct</span> Music;           <span class="hljs-comment">// Music type (file streaming from memory)</span>
-    <span class="hljs-keyword">struct</span> AudioStream;     <span class="hljs-comment">// Raw audio stream type</span>
+                                <span class="hljs-keyword">struct</span> Wave;            <span class="hljs-comment">// Wave type, defines audio wave data</span>
+                                <span class="hljs-keyword">struct</span> Sound;           <span class="hljs-comment">// Basic Sound source and buffer</span>
+                                <span class="hljs-keyword">struct</span> Music;           <span class="hljs-comment">// Music type (file streaming from memory)</span>
+                                <span class="hljs-keyword">struct</span> AudioStream;     <span class="hljs-comment">// Raw audio stream type</span>
 
-    <span class="hljs-keyword">struct</span> VrDeviceInfo;    <span class="hljs-comment">// VR device parameters</span>
-    <span class="hljs-keyword">struct</span> VrStereoConfig;  <span class="hljs-comment">// VR Stereo rendering configuration for simulator</span>
-
-    </code></pre></div>
+                                <span class="hljs-keyword">struct</span> VrDeviceInfo;    <span class="hljs-comment">// VR device parameters</span>
+                                <span class="hljs-keyword">struct</span> VrStereoConfig;  <span class="hljs-comment">// VR Stereo rendering configuration for simulator</span>
+                            </code>
+                        </pre>
+                    </div>
                 </div>
+
                 <div class="rightgroup">
                     <p id="pcolors">colors</p>
-                    <div id="colors"><pre><code class="cpp hljs ">
-    <span class="hljs-comment">// Custom raylib color palette for amazing visuals</span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> LIGHTGRAY  (Color){ 200, 200, 200, 255 }        <span class="hljs-comment">// Light Gray</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> GRAY       (Color){ 130, 130, 130, 255 }        <span class="hljs-comment">// Gray</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> DARKGRAY   (Color){ 80, 80, 80, 255 }           <span class="hljs-comment">// Dark Gray</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> YELLOW     (Color){ 253, 249, 0, 255 }          <span class="hljs-comment">// Yellow</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> GOLD       (Color){ 255, 203, 0, 255 }          <span class="hljs-comment">// Gold</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> ORANGE     (Color){ 255, 161, 0, 255 }          <span class="hljs-comment">// Orange</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> PINK       (Color){ 255, 109, 194, 255 }        <span class="hljs-comment">// Pink</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> RED        (Color){ 230, 41, 55, 255 }          <span class="hljs-comment">// Red</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> MAROON     (Color){ 190, 33, 55, 255 }          <span class="hljs-comment">// Maroon</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> GREEN      (Color){ 0, 228, 48, 255 }           <span class="hljs-comment">// Green</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> LIME       (Color){ 0, 158, 47, 255 }           <span class="hljs-comment">// Lime</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> DARKGREEN  (Color){ 0, 117, 44, 255 }           <span class="hljs-comment">// Dark Green</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> SKYBLUE    (Color){ 102, 191, 255, 255 }        <span class="hljs-comment">// Sky Blue</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> BLUE       (Color){ 0, 121, 241, 255 }          <span class="hljs-comment">// Blue</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> DARKBLUE   (Color){ 0, 82, 172, 255 }           <span class="hljs-comment">// Dark Blue</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> PURPLE     (Color){ 200, 122, 255, 255 }        <span class="hljs-comment">// Purple</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> VIOLET     (Color){ 135, 60, 190, 255 }         <span class="hljs-comment">// Violet</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> DARKPURPLE (Color){ 112, 31, 126, 255 }         <span class="hljs-comment">// Dark Purple</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> BEIGE      (Color){ 211, 176, 131, 255 }        <span class="hljs-comment">// Beige</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> BROWN      (Color){ 127, 106, 79, 255 }         <span class="hljs-comment">// Brown</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> DARKBROWN  (Color){ 76, 63, 47, 255 }           <span class="hljs-comment">// Dark Brown</span></span>
+                    <div id="colors">
+                        <pre>
+                            <code class="cpp hljs ">
+                                <span class="hljs-comment">// Custom raylib color palette for amazing visuals</span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> LIGHTGRAY  (Color){ 200, 200, 200, 255 }        <span class="hljs-comment">// Light Gray</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> GRAY       (Color){ 130, 130, 130, 255 }        <span class="hljs-comment">// Gray</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> DARKGRAY   (Color){ 80, 80, 80, 255 }           <span class="hljs-comment">// Dark Gray</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> YELLOW     (Color){ 253, 249, 0, 255 }          <span class="hljs-comment">// Yellow</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> GOLD       (Color){ 255, 203, 0, 255 }          <span class="hljs-comment">// Gold</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> ORANGE     (Color){ 255, 161, 0, 255 }          <span class="hljs-comment">// Orange</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> PINK       (Color){ 255, 109, 194, 255 }        <span class="hljs-comment">// Pink</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> RED        (Color){ 230, 41, 55, 255 }          <span class="hljs-comment">// Red</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> MAROON     (Color){ 190, 33, 55, 255 }          <span class="hljs-comment">// Maroon</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> GREEN      (Color){ 0, 228, 48, 255 }           <span class="hljs-comment">// Green</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> LIME       (Color){ 0, 158, 47, 255 }           <span class="hljs-comment">// Lime</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> DARKGREEN  (Color){ 0, 117, 44, 255 }           <span class="hljs-comment">// Dark Green</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> SKYBLUE    (Color){ 102, 191, 255, 255 }        <span class="hljs-comment">// Sky Blue</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> BLUE       (Color){ 0, 121, 241, 255 }          <span class="hljs-comment">// Blue</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> DARKBLUE   (Color){ 0, 82, 172, 255 }           <span class="hljs-comment">// Dark Blue</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> PURPLE     (Color){ 200, 122, 255, 255 }        <span class="hljs-comment">// Purple</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> VIOLET     (Color){ 135, 60, 190, 255 }         <span class="hljs-comment">// Violet</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> DARKPURPLE (Color){ 112, 31, 126, 255 }         <span class="hljs-comment">// Dark Purple</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> BEIGE      (Color){ 211, 176, 131, 255 }        <span class="hljs-comment">// Beige</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> BROWN      (Color){ 127, 106, 79, 255 }         <span class="hljs-comment">// Brown</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> DARKBROWN  (Color){ 76, 63, 47, 255 }           <span class="hljs-comment">// Dark Brown</span></span>
 
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> WHITE      (Color){ 255, 255, 255, 255 }        <span class="hljs-comment">// White</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> BLACK      (Color){ 0, 0, 0, 255 }              <span class="hljs-comment">// Black</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> BLANK      (Color){ 0, 0, 0, 0 }                <span class="hljs-comment">// Transparent</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> MAGENTA    (Color){ 255, 0, 255, 255 }          <span class="hljs-comment">// Magenta</span></span>
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> RAYWHITE   (Color){ 245, 245, 245, 255 }        <span class="hljs-comment">// Ray White</span></span>
-
-    </code></pre></div>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> WHITE      (Color){ 255, 255, 255, 255 }        <span class="hljs-comment">// White</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> BLACK      (Color){ 0, 0, 0, 255 }              <span class="hljs-comment">// Black</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> BLANK      (Color){ 0, 0, 0, 0 }                <span class="hljs-comment">// Transparent</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> MAGENTA    (Color){ 255, 0, 255, 255 }          <span class="hljs-comment">// Magenta</span></span>
+                                <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> RAYWHITE   (Color){ 245, 245, 245, 255 }        <span class="hljs-comment">// Ray White</span></span>
+                            </code>
+                        </pre>
+                    </div>
                 </div>
             </div>
             <div id="copyright">
                 <p>raylib quick reference card - Copyright (c) 2013-2021 Ramon Santamaria (<a href="https://www.twitter.com/raysan5">@raysan5</a>)</p>
             </div>
         </div>
-
-
-        <!-- Google Analytics tracking code -->
-        <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-45733555-1', 'raylib.com');
-        ga('require', 'linkid', 'linkid.js');
-        ga('send', 'pageview');
-        </script>
 
     </body>
 
